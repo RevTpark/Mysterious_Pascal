@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Trying out CSS
+        </title>
+        <script src="main.js" defer></script>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        
+    </head>
+    <body style="background: rgb(233, 220, 197);">
+        <div class="upper">Into the Mysteries of Pascal Triangle #Placeholder</div>
+        <nav class="main-menu">
+            <div><button class="box" onclick="input_collapse()">Custom Pascal</button></div>
+            <div><button class="box" onclick="button_collapse()">Visualize Properties</button></div>
+            <div><button class="box" onclick="indepth_redirect()">Properties in Depth</button></div>
+            <div><button class="box" onclick="about_redirect()">About Website</button></div>
+            <div><button class="box" onclick="about_me_redirect()">About Me</button></div>
+        </nav>
+        <div>
+            <div id="input_collapse" class="create-menu collapse">
+                <div><button class="box" onclick="createHexs()">Create</button></div>
+                <input type="text" id="Text1" maxlength="2 " size="5" style="margin: 5px; border: 1.5px solid black;">
+                    Type a number between 1 to 11.
+            </div>
+            <div id="button_collapse" class="menu collapse">
+                <div><button class="box" onclick="property1()">Obtain 2<sup>n</sup></button></div>
+                <div><button class="box" onclick="property2()">Obtain 11<sup>n</sup></button></div>
+                <div><button class="box" onclick="property3()">Symmetry</button></div>
+                <div><button class="box" onclick="property4()">Combinatorics</button></div>
+                <div><button class="box" onclick="property5()">Expansion</button></div>
+                <div><button class="box" onclick="property6()">Check Primes</button></div>
+                <div><button class="box" onclick="property7()">Diagonals Magic</button></div>
+                <div><button class="box" onclick="property8()">Fibonacci Seqeuence</button></div>
+                <div><button class="box" onclick="property9()">Sierpinski’s Triangle</button></div>
+                <div><button class="box" onclick="property10()">Binary Form</button></div>
+                <div><button class="box" onclick="property11()">Hexagon Product</button></div>
+                <div><button class="box" onclick="property12()">Hockey Stick</button></div>
+                <div><button class="box" onclick="property13()">Obtain &#960;?</button></div>
+                <div><button class="box" onclick="property14()">Euler's Number</button></div>
+                <div><button class="box" onclick="property15()">Circle Madmax</button></div>
+            </div>
+        </div>
+        <div id="button_helper" class=""></div>
+        <div id="cursor"></div>
+        <div id="createhexagons" class="createdtext">
+
+        </div>
+        <div id="textheader" class="prophead">
+            What is Pascal's Triangle? 
+        </div>
+        <div id="textdefine" class="prop-small">
+            Pascal's Triangle is a triangle of numbers where each number is the two numbers directly above it added together.
+            <br>(Except for the 0<sup>th</sup> row.)
+        </div>
+        <div class="circle" id="create_circle_prop15">
+            <!-- <div id="point_prop15">
+                <div class="point1"></div>
+                <div class="point1"></div>
+                <div class="point1"></div>
+                <div class="point1"></div>
+                <div class="point1" style="opacity: 0;"></div>
+            </div>
+            <div>
+                <div class="outer-line"></div>
+                <div class="outer-line"></div>
+                <div class="outer-line"></div>
+                <div class="outer-line"></div>
+                <div class="inner-line1"></div>
+                <div class="inner-line2"></div>
+            </div> -->
+        </div>
+        <div class="container">
+            
+            <!-- <div id="arrow_element"></div> -->
+            <!-- <div id="powerof2">2</div> -->
+            <div class="row">
+                <div class="hexagon"><div class="text">1</div></div>
+            </div>
+            <div class="row">
+                <div class="hexagon"><div class="text">1</div></div>
+                <div class="hexagon"><div class="text">1</div></div>
+            </div>
+            <div class="row">
+                <div class="hexagon"><div class="text">1</div></div>
+                <div class="hexagon"><div class="text"></div></div>
+                <div class="hexagon"><div class="text">1</div></div>
+            </div>
+            <div class="row">
+                <div class="hexagon"><div class="text">1</div></div>
+                <div class="hexagon"><div class="text">&nbsp;</div></div>
+                <div class="hexagon"><div class="text">&nbsp;</div></div>
+                <div class="hexagon"><div class="text">1</div></div>
+            </div>
+            <div class="row">
+                <div class="hexagon"><div class="text">1</div></div>
+                <div class="hexagon"><div class="text">&nbsp;</div></div>
+                <div class="hexagon"><div class="text">&nbsp;</div></div>
+                <div class="hexagon"><div class="text">&nbsp;</div></div>
+                <div class="hexagon"><div class="text">1</div></div>
+            </div>
+        </div>
+        <div class="lower">
+            <a href="https://github.com/RevTpark">&copy; Tanishq Parkar 2021</a>
+        </div>
+    </body>
+</html>

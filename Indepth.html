@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Properties</title>
+        <script src="indepth.js" defer></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body style="background: rgb(233, 220, 197);">
+        <div class="upper">Into the Mysteries of Pascal Triangle #Placeholder</div>
+        <nav class="main-menu">
+            <div><button class="box" onclick="back_redirect()">Home</button></div>
+            <div><button class="box" onclick="indepth_redirect()" style="background-color: rgb(226, 196, 144);
+                box-shadow: inset 0 0 5px rgb(114, 102, 81);">Properties in Depth</button></div>
+            <div><button class="box" onclick="about_redirect()">About Website</button></div>
+            <div><button class="box" onclick="about_me_redirect()">About Me</button></div>
+        </nav>
+        <div class="indepth_information">
+            <big>Lets learn about each property in depth.</big> <br>
+            <small style="font-style: italic; font-size: 20px;">Note: All the rows and elements are 0 indexed.</small>
+        </div>
+        <div>
+            <div class="indepth_property_collapser">
+                <h2>Sum of each Row</h2>
+            </div>
+            <div class="indepth_collapse">
+                <p>
+                    To create a pascal's triangle we add the elements as we go down the triangle, So instead we try to add them row-wise. While adding each row, 
+                    we notice the pattern of the sums appears to be in powers of 2. <br> Example: 0<sup>th</sup> row sums to 1 => 2<sup>0</sup>, 1<sup>st</sup> 
+                    row sums to 2 => 2<sup>1</sup>, 3<sup>rd</sup> row sums to 4 => 2<sup>2</sup>, so on. And we obtain the sequence 1, 2, 4, 8, 16, 32, 64... 
+                </p> 
+                <p><a href="#" style="color: white;">Useful Sources</a></p>
+            </div>
+        </div>
+        <div>
+            <div class="indepth_property_collapser">
+                <h2>Unitray Sum of each row</h2>
+            </div>
+            <div class="indepth_collapse">
+                <p>
+                    When we add each number individually we obtain 2<sup>n</sup> for the given n<sup>th</sup> row. While one might think joining the numbers in the n<sup>th</sup> row also gives us 11<sup>n</sup>
+                    but it appears to be the case for the first 4 rows after that numbers don't seem to match 11<sup>n</sup>. The correct way is when we add the numbers in a unitary decimal fashion, 
+                    we start to see the powers of 11, which also holds after the 4<sup>th</sup> row. <br> Example: 2<sup>nd</sup> row gives 100 + 20 + 1 = 121 => 11<sup>2</sup>, 
+                    5<sup>th</sup> gives 100000 + 50000 + 100000 + 1000 + 50 + 1 = 1,61,051 => 11<sup>5</sup>.
+                </p>
+                <p><a href="#" style="color: white;">Useful Source</a></p>
+            </div>
+        </div>
+        <div>
+            <div class="indepth_property_collapser">
+                <h2>Line Symmetry</h2>
+            </div>
+            <div class="indepth_collapse">
+                <p>
+                    As the name suggests, this property concludes that Pascal Triangle is symmetric over the Y-axis or we can say it has mirror symmetry, ie,
+                    When viewed in a mirror the pascal's triangle will remain unaffected and appears the same. This property is more visual but has mathematical proof as well.
+                    In simple terms, the proof glances over the fact that <sup>n</sup>C<sub>r</sub> = <sup>n</sup>C<sub>n-r</sub>. 
+                </p>
+                <p><a href="#" style="color: white;">Useful Source</a></p>
+            </div>
+        </div>
+        <div>
+            <div class="indepth_property_collapser">
+                <h2>Combinatorics</h2>
+            </div>
+            <div class="indepth_collapse">
+                <p>
+                    Assume we have been given <strong>n</strong> objects and we need to pick <strong>r</strong> (where r <= n) objects from them. As we know, the number of ways 
+                    to do so is <sup>n</sup>C<sub>r</sub>. We can use pascal's triangle to check this instantaneously by going to the n<sup>th</sup> row and checking the 
+                    r<sup>th</sup> element. The vice versa also holds true, wherein it is impossible to draw an infinite Pascal's triangle, so <sup>n</sup>C<sub>r</sub> can be used 
+                    to find the value of any element in the triangle. <br> Example: To find <sup>5</sup>C<sub>2</sub> we can go to the 5<sup>th</sup> row and check the 2<sup>nd</sup>
+                    element and we get 10, so we can conclude <sup>5</sup>C<sub>2</sub> = 10.
+                </p>
+                <p><a href="#" style="color: white;">Useful Source</a></p>
+            </div>
+        </div>
+        <div>
+            <div class="indepth_property_collapser">
+                <h2>Binomial Expansion</h2>
+            </div>
+            <div class="indepth_collapse">
+                <p>
+                    One of the most used properties of pascal's triangle is obtaining Coefficients of Binomial Expansion. Assume we have to find the expansion of (a+b)<sup>n</sup>. We can 
+                    go to the n<sup>th</sup> row and check elements. <br> Each element starting from left to right represents the coefficient of the expansion. Extra information required 
+                    is expansion formula:
+                    <div id="indepth_expansion"></div>
+                    Example: To find (a+b)<sup>4</sup>, we can to check 4<sup>th</sup> row and obtain coefficients as 1, 4, 6, 4, 1. Now, we can construct the final answer as (a+b)<sup>4</sup> =
+                    1*a<sup>4</sup> + 4*a<sup>3</sup>*b + 6*a<sup>2</sup>*b<sup>2</sup> + 4*a*b<sup>3</sup> + 1*b<sup>4</sup>.
+                </p>
+                <p><a href="#" style="color: white;">Useful Source</a></p>
+            </div>
+        </div>
+        <div>
+            <div class="indepth_property_collapser">
+                <h2>Check Primes</h2>
+            </div>
+            <div class="indepth_collapse">
+                <p>
+                    Even though it might not look like there could be a relation between the prime numbers in the triangle but Prime Number verification can be done using Pascal's Triangle.
+                    Assume we have a number <strong>n</strong> and we want to verify if it is Prime or not. We can go to the n<sup>th</sup> row of Pascal's triangle and check if 
+                    <strong>n</strong> is divisible by all the non-one elements(elements with value not equal to 1). If it is the number is Prime Number, otherwise, it is not a Prime Number.
+                    The vice versa also holds true, i.e., when the 1<sup>st</sup> element of a row is prime then all other elements are divisible by that number.
+                    <br>Example: n = 5, Now 5<sup>th</sup> row has elements 5,10,10,5. Since all elements are divisible by 5 we can verify that 5 is Prime.
+                </p>
+                <p><a href="#" style="color: white;">Useful Source</a></p>
+            </div>
+        </div>
+        <div>
+            <div class="indepth_property_collapser">
+                <h2>Diagonals Magic</h2>
+            </div>
+            <div class="indepth_collapse">
+                <p>
+                   The diagonals of the Pascal Triangle also exhibit some weird properties. <br> The 1<sup>st</sup> diagonal contains elements of the same value equal to 1. <br> The 2<sup>nd</sup> diagonal contains
+                   all the Natural Numbers or Counting Numbers. <br> The 3<sup>rd</sup> diagonal contains all the Triangular Numbers. Triangular Numbers are a count of those numbers which can be arranged in an 
+                   equilateral triangle. <br> The 4<sup>th</sup> diagonal contains Tetrahedral Numbers. <br> And so on... 
+                </p>
+                <p><a href="#" style="color: white;">Useful Source</a></p>
+            </div>
+        </div>
+        <div>
+            <div class="indepth_property_collapser">
+                <h2>Fibonacci Sequence</h2>
+            </div>
+            <div class="indepth_collapse">
+                <p>
+                    Even the Fibonacci Sequence makes an appearance in Pascal's Triangle. There seems no obvious pattern that leads to the Fibonacci Sequence, so how do we obtain it? If we consider the 45-degree 
+                    diagonals and draw lines on the triangle, we start to notice the 1<sup>n</sup> diagonal starting from the top that contains a triangle element is [1], the 2<sup>nd</sup> diagonal contains [1], 
+                    3<sup>rd</sup> contains [1,1], 4<sup>th</sup> contains [1,2], 5<sup>th</sup> contains [1,3,1] and so on. We still don't see the Fibonacci Sequence just yet. Now we add all elements in each diagonal,
+                    We obtain 1, 1, 1+1 = 2, 1+2 = 3, 1+3+1 = 5 <br> => 1, 1, 2, 3, 5, 8 ... is the required Fibonacci Sequence.
+                </p>
+                <p><a href="#" style="color: white;">Useful Source</a></p>
+            </div>
+        </div>
+        <div>
+            <div class="indepth_property_collapser">
+                <h2>Sierpinski’s Triangle</h2>
+            </div>
+            <div class="indepth_collapse">
+                <p>
+                    When we color all the odd terms in Pascal's Triangle, we obtain a fractal which is commonly known as Sierpinski’s Triangle. In Sierpinski’s Triangle, We start with an equilateral triangle and 
+                    connect the midpoints of the segments to construct another triangle inside. This gives us access to 4 new triangles inside of the main triangle. On those triangles, we can repeatedly perform the 
+                    earlier action to get new triangles within the previous triangles. This property is more easily understood visually.
+                </p>
+                <p><a href="#" style="color: white;">Useful Source</a></p>
+            </div>
+        </div>
+        <div>
+            <div class="indepth_property_collapser">
+                <h2>Binary Form</h2>
+            </div>
+            <div class="indepth_collapse">
+                <p>
+                    We can make the triangle into binary form by getting the modulo of each element with 2. We will be left with 1's and 0's in the triangle. Now going row by row we can evaluate each binary number.
+                    Observing the first 9 rows as an example we get 1, 3, 5, 15, 17, 51, 85, 255, and 257. Here starting from 3 we can notice a pattern: 3 (Prime), 5 (Prime), 15 (5*3), 17 (Prime), 51 (17*3), 85 (17*5), 
+                    255 (17*15), 257 (Prime). Every number is Prime or multiplication of previous numbers. All the Prime numbers obtained are known as Fermat Primes, that is, they are of the type: 
+                    2<sup>2<sup>n</sup></sup> + 1.
+                </p>
+                <p><a href="#" style="color: white;">Useful Source</a></p>
+            </div>
+        </div>
+        <div>
+            <div class="indepth_property_collapser">
+                <h2>Hexagonal Product</h2>
+            </div>
+            <div class="indepth_collapse">
+                <p>
+                    Consider any element in Pascal's Triangle that has 6 neighbors. According to the property, the product of any 3 alternate elements is equal to the remaining 3 alternate numbers. For better
+                    understanding, this property should be visualized. <br> Example: Consider the 4<sup>th</sup> row and its 1<sup>st</sup> element "4", the pairs of 3 alternate numbers are [3, 10, 1] and [6, 5, 1] 
+                    and the product of each equals 30. 
+                </p>
+                <p><a href="#" style="color: white;">Useful Source</a></p>
+            </div>
+        </div>
+        <div>
+            <div class="indepth_property_collapser">
+                <h2>Hockey Stick</h2>
+            </div>
+            <div class="indepth_collapse">
+                <p>
+                    According to this property if we start from any of the outer 1's and follow the diagonal elements going down and at some point decide to stop then the element that is bottom right or left
+                    depending on where one started is the summation of all the elements in the path we followed. The path followed is the handle of the hockey stick and the element that holds the summation 
+                    is the front part of the stick sort of in shape like L. <br> Example: Consider we start from 2<sup>nd</sup> row 2<sup>nd</sup> element and follow a path of 3 steps so we obtain the stick 
+                    as [1, 3, 6]. Since we started to go down left the element to the bottom right contains 10 which also is the summation of all the path elements.
+                </p>
+                <p><a href="#" style="color: white;">Useful Source</a></p>
+            </div>
+        </div>
+        <div>
+            <div class="indepth_property_collapser">
+                <h2>Obtaining &#960;</h2>
+            </div>
+            <div class="indepth_collapse">
+                <p>
+                    Looking at Pascal's Triangle it seems to obtain Pi is a difficult task but when we take the multiplicative inverse of each number, starting from the top right the 2<sup>nd</sup> diagonal
+                    when elements are alternatively added and subtracted we obtain the answer as &#960; - 2. Mathematically, 1 - (1/3) + (1/6) - (1/10) ... = &#960; - 2. Source contains more in-depth into 
+                    the mathematical proof of the same.
+                </p>
+                <p><a href="#" style="color: white;">Useful Source</a></p>
+            </div>
+        </div>
+        <div>
+            <div class="indepth_property_collapser">
+                <h2>Euler's Number</h2>
+            </div>
+            <div class="indepth_collapse">
+                <p>
+                    We have tried summation of the rows and unitary summation to get different properties but we still haven't used the product of the rows to get some weird properties. Well, Euler's number 
+                    is obtained by using the product of the rows. Consider the n<sup>th</sup> row and the product to be p<sub>n</sub> of that row, the product of (n-1)<sup>th</sup> row to be p<sub>n-1</sub> 
+                    , and (n+1)<sup>th</sup> row to be p<sub>n+1</sub>. Using this information we conclude that ((p<sub>n+1</sub>) * (p<sub>n-1</sub>)) / (p<sub>n</sub><sup>2</sup>) = (1 + (1/n))<sup>n</sup>.
+                    Here as <strong>n</strong> tends to infinity, the value tends to Euler's Number e = 2.71.
+                </p> 
+                <p><a href="#" style="color: white;">Useful Source</a></p>
+            </div>
+        </div>
+        <div>
+            <div class="indepth_property_collapser">
+                <h2>Circle Mad max</h2>
+            </div>
+            <div class="indepth_collapse">
+                <p>
+                    Consider a circle with <strong>n</strong> points on its circumference, we connect all the points to each other. Now going to the n<sup>th</sup> row of Pascal's triangle, ignoring the 
+                    first element, all the remaining elements represents the number of points, number of lines, number of quadrilaterals, number of pentagons, and so on in respective order. <br> Example: consider
+                    n = 5, now the 5<sup>th</sup> row elements starting from 1<sup>st</sup> row are 5, 10, 10, 5 and 1. This translates to circle 5 = number of points, 10 = number of lines, 10 =
+                     number of triangles,<br> 5 = number of quadrilaterals and 1 pentagon. 
+                </p>
+                <p><a href="#" style="color: white;">Useful Source</a></p>
+            </div>
+        </div>
+    </body>
+</html>
