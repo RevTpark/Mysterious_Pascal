@@ -200,7 +200,7 @@
 
 .property1-display{
     font-size: 30px;
-    color: rgb(91, 122, 223);
+    color: rgb(0, 0, 0);
     position: relative;
     top: -485px;
     right: -174px;
@@ -674,10 +674,22 @@
 
 .about_header{
     color: black;
-    font-size: 25px;
-    margin-top: 15px;
+    font-size: 30px;
+    margin-top: 25px;
     text-align: center;
+    margin-bottom: 40px;
 }
+
+.about_website_content{
+    height: 250px;
+    width: inherit;
+    background: rgb(46, 46, 46);
+    color: white;
+    border: 10px outset burlywood ;
+    text-align: center;
+    font-size: 20px;
+}
+
 
 /* About me page-------------------------------------------------------------- */
 .profile_circle{
