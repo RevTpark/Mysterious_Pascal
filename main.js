@@ -53,8 +53,11 @@ function input_collapse(){
     else{ item.style.display = "flex"; }
 }
 
+var in_progress = false; // Global variable to check if any property is in progress.
+
 //Trying to make an adder. Two elements glow and add up to become third. third element's innerHTML changes.
 async function pascal_animator(){
+    in_progress = true;
     const container = document.querySelector('.container');
     const arr = [
         [[1,0],[1,1],[2,1]], 
@@ -83,6 +86,7 @@ async function pascal_animator(){
             temp_ele.parentNode.replaceChild(new_ele, temp_ele);
         }
     }
+    in_progress = false;
 }
 pascal_animator();
 
@@ -181,7 +185,6 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-var in_progress = false; // Global variable to check if any property is in progress.
 
 // Power of 2's Property
 async function property1(){
