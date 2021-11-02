@@ -193,12 +193,12 @@ async function property1(){
         createHexs(_default=true);
         const container = document.querySelector(".container");
         document.getElementById('textheader').innerHTML = "Power of 2's";
-        document.getElementById('textdefine').innerHTML = "Observing the sum of each row: ";
+        document.getElementById('textdefine').innerHTML = "Observing the sum of each row : ";
         var item = document.createElement("div");
         item.classList.add("property1-display");
         container.appendChild(item);
         for(let i=0; i<5;i++){
-            item.innerHTML = 2**i + "(2 <sup>" + i + "</sup>)";
+            item.innerHTML = 2**i + " (2 <sup>" + i + "</sup>)";
             for(let j=0; j<=i; j++){
                 container.getElementsByClassName("row")[i].getElementsByClassName('hexagon')[j].classList.toggle('property1');
             }

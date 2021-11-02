@@ -1,16 +1,18 @@
 /*.active add karna hai, collaspible, same class ke aju baju naam*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@600&display=swap');
+
 .row {
     margin-bottom: -30px;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap');
 
 .upper{
     background-color: rgb(107, 107, 107);
     height: 75px;
     font-size: 45px;
-    font-family: 'Ceviche One', cursive, sans-serif;
-    font-style: oblique;
+    font-family: 'Orbitron', sans-serif;
+    /* font-style: oblique; */
     font-weight: 500;
     margin-top: 5px;
     color: whitesmoke;
@@ -44,6 +46,9 @@
     border-bottom: 2px solid transparent;
     border-image: linear-gradient(90deg, rgba(0, 0, 0, 0.027) 1%, rgb(94, 94, 94), rgba(0, 0, 0, 0.027)) 1%;
     border-image-slice: 1;
+    font-family: 'Jura', sans-serif;
+    letter-spacing: -1px;
+    font-size: 20px;
 }
 
 .menu{
@@ -94,7 +99,8 @@
     font-size: 25px;
     padding-top: 15px;
     color: rgb(37, 37, 37);
-    font-weight: bold;
+    font-family: 'Jura', sans-serif;
+    letter-spacing: -1px;
 }
 
 .lower{
@@ -122,7 +128,8 @@
 }
 
 .prophead{
-    font-size: 30px;
+    font-size: 35px;
+    font-family: 'Josefin Slab', serif;
     text-align: center;
     margin-top: 20px;
 }
@@ -130,6 +137,8 @@
 .prop-small{
     font-size: 20px;
     text-align: center;
+    font-family: 'Jura', sans-serif;
+    letter-spacing: -1px;
     margin-top: 20px;
 }
 
@@ -199,11 +208,13 @@
 }
 
 .property1-display{
-    font-size: 30px;
+    font-size: 28px;
     color: rgb(0, 0, 0);
     position: relative;
     top: -485px;
-    right: -174px;
+    right: -190px;
+    font-family: 'Jura', sans-serif;
+    letter-spacing: -1px;
 }
 
 @keyframes property1 {  /* Property 2 uses this as well */
@@ -260,6 +271,8 @@
     position: relative;
     top: -435px;
     font-size: 25px;
+    font-family: 'Jura', sans-serif;
+    letter-spacing: -1px;
 }
 
 @keyframes property5 {
@@ -323,7 +336,7 @@
 
 @keyframes property9 {
     0%{ background: grey;}
-    15%{ background: wheat;}
+    15%{ background: rgb(255, 255, 255);}
     100%{ background: grey;}
 }
 /* End of block */
@@ -360,6 +373,8 @@
     position: relative;
     top: var(--text_top);
     left: var(--text_left);
+    font-family: 'Jura', sans-serif;
+    letter-spacing: -1px;
 }
 /* End of block */
 
@@ -613,6 +628,7 @@
     background: yellowgreen;
     font-size: 25px;
     padding: 15px;
+    font-family: 'Josefin Slab', serif;
 }
 
 .indepth_property_collapser{
@@ -626,6 +642,8 @@
     outline: none;  
     font-size: 15px;
     margin-top: 10px;
+    font-family: 'Jura', sans-serif;
+    letter-spacing: -1px;
 }
 
 .indepth_collapser_active{
@@ -638,6 +656,8 @@
     width: inherit;
     padding: 18px;
     display: none;
+    font-family: 'Jura', sans-serif;
+    letter-spacing: 0px;
 }
 
 .indepth_property_collapser::before{
@@ -674,10 +694,11 @@
 
 .about_header{
     color: black;
-    font-size: 30px;
+    font-size: 40px;
     margin-top: 25px;
     text-align: center;
     margin-bottom: 40px;
+    font-family: 'Josefin Slab', serif;
 }
 
 .about_website_content{
@@ -688,6 +709,8 @@
     border: 10px outset burlywood ;
     text-align: center;
     font-size: 20px;
+    font-family: 'Jura', sans-serif;
+    letter-spacing: -1px;
 }
 
 
