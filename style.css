@@ -720,9 +720,21 @@
     height: 230px;
     background: linear-gradient(90deg, red, green, blue);
     border-radius: 50%;
+    border: 5px solid transparent;
     margin-top: 60px;
     margin-left: 40px;
     animation: profile-rotate 5s linear infinite;
+}
+
+.profile_circle::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: url("/logo/Tanishq_Photo.jpg");
+    background-color: #000;
+    animation: profile-rotate 5s linear infinite reverse;
 }
 
 @keyframes profile-rotate {

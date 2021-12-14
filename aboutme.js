@@ -138,8 +138,8 @@ function project_listener(idx, required_id){
 }
 
 function project_activator(){
-    const arr = ["django_blog", "drf_blog", "kivy_app"]
-    for(let i=0;i<3;i++){
+    const arr = ["django_blog", "drf_blog", "kivy_app", "bms"]
+    for(let i=0;i<arr.length;i++){
         document.getElementsByClassName("project")[i].addEventListener("click", function(){
             project_listener(i, arr[i]);
         })
